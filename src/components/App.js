@@ -6,7 +6,7 @@ class App extends Component {
     render() {
         let relatives=["Ankit","Punitha", "Jyoti","Nikhil","Rohit","Jubin"]
         return(
-            <div id="main">
+            
 
                <ol key="relativeList">
                     {
@@ -16,7 +16,7 @@ class App extends Component {
                     }
 
                </ol>
-            </div>
+        
         )
     }
 }
