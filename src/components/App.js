@@ -2,21 +2,31 @@ import React, {Component, useState} from "react";
 import '../styles/App.css';
 
 class App extends Component {
-    
+
     render() {
-        let relatives=["Ankit","Punitha", "Jyoti","Nikhil","Rohit","Jubin"]
+        const relatives=[
+            {
+                id:1,
+                name:"Amit"
+            },
+            {
+                id:2,
+                name:"Amarjeet"
+            },
+            {
+                id:3,
+                name:"Unknown"
+            }
+        ]
         return(
-            
-
-               <ol key="relativeList">
-                    {
-                        relatives.map((relative, index)=>(
-                           <li key={`relativeList${index+1}`}>{relative}</li> 
-                        ))
-                    }
-
-               </ol>
-        
+            <div id="main">
+                <ol key={"relativeList"}>
+                {relatives.map((relative)=>{
+                    console.log("relativeListItem"+relative.id)
+                return <li key={"relativeListItem"+relative.id}>{relative.name}</li>
+               })}
+                </ol>
+            </div>
         )
     }
 }
